@@ -1,31 +1,49 @@
-
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Music_Page</title>
+    <link rel="icon" type="image/x-icon" href="/img/vinyl.png">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">New album <img src="img/punto-rojo.gif" alt="New" class="new-dot"></a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html"><img style="display: flex;gap: 20px;" src="img/header/vinyl_icon.png"alt="Menu"></a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="new_album.html">New album <img src="img/header/new.gif" alt="New" class="new-dot"></a></li>
+            </ul>
+            <!-- Menú derecho con íconos sociales -->
+            <ul class="social-icons">
+                <li><a href="#"><img src="img/header/twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="img/header/spotify.png" alt="Spotify"></a></li>
+                <li><a href="#"><img src="img/header/youtube.png" alt="YouTube"></a></li>
+                <li><a href="#"><img src="img/header/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </nav>
 
-    <h1>Gallery:</h1>
+        <div style="display: flex; justify-content: center;align-items:flex-start">
+            <img src="img/header/signature.svg" alt="" height="120px" width="120px">
+        </div>
 
-    <section class="gallery">
-        <img src="img/img1.jpg" alt="img1">
-        <img src="img/img2.jpg" alt="img2">
-        <img src="img/img3.jpg" alt="img3">
-        <img src="img/img4.jpg" alt="img4">
-        <img src="img/img5.jpg" alt="img5">
-        <img src="img/img6.jpg" alt="img6">
-    </section>
+    </header>
+
+
+
+    <div class="vinilo-container">
+        <img id="vinilo" src="img/vinyl/reflexiones.png" class="vinilo">
+    </div>
+
+    <div class="controls">
+        <button onclick="prevVinilo()">⏮️</button>
+        <button onclick="nextVinilo()">⏭️</button>
+    </div>
+
 </body>
+<script src="main.js"></script>
 </html>

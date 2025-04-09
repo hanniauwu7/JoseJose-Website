@@ -1,13 +1,12 @@
-
 body {
-    background-color: #002db3;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #153BAA;
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 1em 2em 2em;
 }
 
 nav ul {
+    color: black;
     display: flex;
     list-style: none;
     gap: 20px;
@@ -15,20 +14,52 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
+    font-size: 30px;
 }
 
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #153BAA;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu img {
+    width: 35px;
+    height: 35px;
+}
+
+.menu .social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+
 .new-dot {
-    width: 12px;
-    height: 12px;
+    width: 45px;
+    height: 25px;
     margin-left: 5px;
     vertical-align: middle;
 }
 
 h1 {
-    padding: 20px;
+    padding: 30px;
 }
 
 .gallery {
@@ -42,3 +73,28 @@ h1 {
     width: 100%;
     height: auto;
 }
+
+
+.vinilo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .vinilo {
+    width: 900px; /* ajusta tamaño */
+    height: 890px;
+
+    box-shadow: 0 0 50px 10px rgba(0,0,0,0.6);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+
+/* Animación de cambio */
+  
+.vinilo.animar {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  
