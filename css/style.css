@@ -59,7 +59,8 @@ nav a {
 }
 
 h1 {
-    padding: 30px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .gallery {
@@ -97,4 +98,30 @@ h1 {
     transform: rotateY(90deg);
     opacity: 0;
   }
-  
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.spotify-embed {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+}
