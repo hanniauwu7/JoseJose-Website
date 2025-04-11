@@ -37,7 +37,8 @@ nav a {
 .signature-container {
     display: flex;
     justify-content: center;
-    margin-top: -50px; /* Valor negativo para subir la firma */
+    margin-top: -50px;
+    /* Valor negativo para subir la firma */
     position: relative;
     z-index: 10;
 }
@@ -46,7 +47,6 @@ nav a {
     width: 35px;
     height: 35px;
 }
-
 
 .new-dot {
     width: 45px;
@@ -77,23 +77,25 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .vinilo {
-    width: 900px; /* ajusta tamaño */
-    height: 890px;
+}
 
-    box-shadow: 0 0 50px 10px rgba(0,0,0,0.6);
+.vinilo {
+    width: 900px;
+    /* ajusta tamaño */
+    height: 890px;
+    border-radius: 50%;
     transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-  
+}
+
+
+
 /* Animación de cambio */
 .vinilo.animar {
     transform: rotateY(90deg);
     opacity: 0;
-  }
+}
 
-  .section {
+.section {
     display: flex;
     border-radius: 8px;
     overflow: hidden;
@@ -105,7 +107,6 @@ h1 {
     padding: 1px;
 }
 
-
 .about-image {
     flex: 2;
     display: flex;
@@ -114,15 +115,14 @@ h1 {
     overflow: hidden;
 }
 
-  .about-image img {
+.about-image img {
     width: 70%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
-
-  .container {
+.container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -144,13 +144,11 @@ h1 {
     margin-bottom: 15px;
 }
 
-
 p {
     font-size: 2rem;
     line-height: 1.2;
     margin-bottom: 20px;
 }
-
 
 .gallery-container {
     width: 100%;
@@ -175,7 +173,7 @@ p {
     overflow: hidden;
 }
 
-  .new-album-image img {
+.new-album-image img {
     width: 1000;
     height: 680;
     height: auto;
@@ -229,9 +227,9 @@ p {
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
 }
 
-
 .album-description {
-    margin-top: -8px; /* Valor negativo para subir la firma */
+    margin-top: -8px;
+    /* Valor negativo para subir la firma */
     margin-bottom: 25px;
     font-size: 2rem;
     line-height: 1.2;
@@ -275,7 +273,7 @@ p {
 }
 
 .streaming h3 {
-    
+
     margin-bottom: 15px;
     font-size: 2rem;
 }
@@ -310,13 +308,40 @@ p {
 
 
 /* Posiciones específicas */
-.item1 { grid-column: 1 / 2; grid-row: 1 / 2; }
-.item2 { grid-column: 2 / 4; grid-row: 1 / 2; }
-.item3 { grid-column: 1 / 2; grid-row: 2 / 3; }
-.item4 { grid-column: 2 / 3; grid-row: 2 / 3; }
-.item5 { grid-column: 1 / 4; grid-row: 3 / 4; }
-.item6 { grid-column: 2 / 3; grid-row: 3 / 4; }
+.item1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
 
+.item2 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+.item3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.item4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.item5 {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+
+.item6 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.gallery-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
 
 /* Media query para tablets */
 @media screen and (max-width: 992px) {
@@ -324,49 +349,47 @@ p {
         max-width: 100%;
         gap: 15px;
     }
-    
+
     /* Si tienes elementos hijos directos, puedes ajustar su ancho aquí */
-    .container > * {
-        flex: 1 1 calc(50% - 15px); /* 2 columnas en tablets */
+    .container>* {
+        flex: 1 1 calc(50% - 15px);
+        /* 2 columnas en tablets */
     }
 }
 
 /* Media query para móviles */
 @media screen and (max-width: 576px) {
     .container {
-        flex-direction: column; /* Cambia a columna en móviles */
+        flex-direction: column;
+        /* Cambia a columna en móviles */
         gap: 10px;
     }
-    
+
     /* Si tienes elementos hijos directos */
-    .container > * {
-        flex: 1 1 100%; /* Ocupa todo el ancho en móviles */
+    .container>* {
+        flex: 1 1 100%;
+        /* Ocupa todo el ancho en móviles */
         margin-bottom: 10px;
     }
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
 
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .about-section {
-                flex-direction: column;
-            }
-            
-            .about-content {
-                order: 2;
-                padding: 20px;
-            }
-            
-            .about-image {
-                order: 1;
-                max-height: 300px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
-        .gallery-item {
-            flex: 1 1 100%;
-            max-width: 100%;
-        }
+    .about-content {
+        order: 2;
+        padding: 20px;
+    }
+
+    .about-image {
+        order: 1;
+        max-height: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
