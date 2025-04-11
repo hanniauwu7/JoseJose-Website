@@ -87,8 +87,6 @@ h1 {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-
-
 /* Animación de cambio */
 .vinilo.animar {
     transform: rotateY(90deg);
