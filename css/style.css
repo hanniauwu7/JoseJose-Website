@@ -304,6 +304,32 @@ p {
     height: 50px;
 }
 
+.navigation-button {
+    position: absolute;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.navigation-button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+
+
+
 
 /* Posiciones específicas */
 .item1 {

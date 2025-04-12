@@ -1,6 +1,5 @@
 const vinilos = [
-    "img/vinyl/reflexiones.png",
-    "img/vinyl/jose.png",
+    "img/vinyl/promesas.png",
     "img/vinyl/en_las_buenas.png",
     "img/vinyl/40y20.png",
     "img/vinyl/distancia.png",

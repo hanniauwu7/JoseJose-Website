@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav class="menu">
@@ -20,12 +21,18 @@
             </ul>
             <!--Redes-->
             <ul class="social-icons">
-                <li><a href="https://open.spotify.com/intl-es/artist/4mN0qcMxWX8oToqfDPM5yV?si=EnNi7sfsQIm9phmuQxldbg"target="_blank"><img src="img/header/spotify.png" alt="Spotify"></a></li>
-                <li><a href="https://www.facebook.com/OficialJoseJose/?locale=es_LA"target="_blank"><img src="img/header/facebook.png" alt="Facebook"></a></li>
-                <li><a href="https://www.instagram.com/josejoseoficial/?hl=es"target="_blank"><img src="img/header/instagram.png" alt="Instagram"></a></li>
-                <li><a href="https://www.tiktok.com/@josejoseoficial?lang=es"target="_blank"><img src="img/header/tiktok.png" alt="Tiktok"></a></li>
-                <li><a href="https://x.com/josejoseoficial?lang=es"target="_blank"><img src="img/header/x.png" alt="Twitter"></a></li>
-                <li><a href="https://www.youtube.com/user/josejosetv/videos"target="_blank"><img src="img/header/youtube.png" alt="YouTube"></a></li>
+                <li><a href="https://open.spotify.com/intl-es/artist/4mN0qcMxWX8oToqfDPM5yV?si=EnNi7sfsQIm9phmuQxldbg"
+                        target="_blank"><img src="img/header/spotify.png" alt="Spotify"></a></li>
+                <li><a href="https://www.facebook.com/OficialJoseJose/?locale=es_LA" target="_blank"><img
+                            src="img/header/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/josejoseoficial/?hl=es" target="_blank"><img
+                            src="img/header/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.tiktok.com/@josejoseoficial?lang=es" target="_blank"><img
+                            src="img/header/tiktok.png" alt="Tiktok"></a></li>
+                <li><a href="https://x.com/josejoseoficial?lang=es" target="_blank"><img src="img/header/x.png"
+                            alt="Twitter"></a></li>
+                <li><a href="https://www.youtube.com/user/josejosetv/videos" target="_blank"><img
+                            src="img/header/youtube.png" alt="YouTube"></a></li>
             </ul>
         </nav>
     </header>
@@ -33,17 +40,20 @@
     <div class="signature-container">
         <a href="index.html"><img src="img/header/signature.svg" alt="" height="120px" width="120px"></a>
     </div>
+    <div class="vinyl-player">
+        <button class="navigation-button prev-button" id="prevButton" onclick="prevVinilo()">
+            <img src="img/vinyl/previous.png"></img>
+        </button>
+        <div class="vinilo-container">
+            <img id="vinilo" src="img/vinyl/reflexiones.png" class="vinilo">
 
+        </div>
+        <button class="navigation-button next-button" id="nextButton" onclick="nextVinilo()">
+            <img src="img/vinyl/next.png"></img>
+        </button>
 
-    <div class="vinilo-container">
-        <img id="vinilo" src="img/vinyl/promesas.png" class="vinilo">
     </div>
-
-    <div class="controls">
-        <button onclick="prevVinilo()">⏮️</button>
-        <button onclick="nextVinilo()">⏭️</button>
-    </div>
-
 </body>
 <script src="main.js"></script>
+
 </html>
