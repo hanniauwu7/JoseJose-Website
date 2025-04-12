@@ -38,7 +38,6 @@ nav a {
     display: flex;
     justify-content: center;
     margin-top: -50px;
-    /* Valor negativo para subir la firma */
     position: relative;
     z-index: 10;
 }
@@ -72,27 +71,6 @@ h1 {
     height: auto;
 }
 
-.vinilo-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.vinilo {
-    width: 900px;
-    /* ajusta tamaño */
-    height: 890px;
-    border-radius: 50%;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* Animación de cambio */
-.vinilo.animar {
-    transform: rotateY(90deg);
-    opacity: 0;
-}
-
 .section {
     display: flex;
     border-radius: 8px;
@@ -103,6 +81,7 @@ h1 {
 .about-content {
     flex: 3;
     padding: 1px;
+    text-align: justify;
 }
 
 .about-image {
@@ -216,20 +195,11 @@ p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.vinyl-image {
-    position: absolute;
-    width: 65%;
-    top: 10%;
-    right: -15%;
-    transform: rotate(15deg);
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
-}
-
 .album-description {
-    margin-top: -8px;
-    /* Valor negativo para subir la firma */
-    margin-bottom: 25px;
-    font-size: 2rem;
+    margin-top: -3px;
+    text-align: justify;
+    margin-bottom: 30px;
+    font-size: 26px;
     line-height: 1.2;
 }
 
@@ -304,30 +274,66 @@ p {
     height: 50px;
 }
 
-.navigation-button {
-    position: absolute;
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 24px;
-    cursor: pointer;
-    padding: 15px;
-    transition: all 0.3s ease;
+/* Estilos para el reproductor de vinilo */
+
+/* Animación de cambio */
+.vinilo.animar {
+    transform: rotateY(90deg);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
-.navigation-button:hover {
-    color: white;
-    transform: scale(1.1);
+.vinyl-player {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.vinilo-container {
+    position: relative;
+    width: 80%; /* Aumentado del 60% al 80% */
+    max-width: 700px; /* Aumentado de 500px a 700px */
+    z-index: 1;
+}
+
+.vinilo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navigation-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.navigation-button img {
+    width: 40px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.navigation-button:hover img {
+    opacity: 1;
 }
 
 .prev-button {
-    left: 20px;
+    left: 5%;
 }
 
 .next-button {
-    right: 20px;
+    right: 5%;
 }
-
 
 
 
@@ -367,53 +373,79 @@ p {
     max-width: 100%;
 }
 
-/* Media query para tablets */
-@media screen and (max-width: 992px) {
-    .container {
-        max-width: 100%;
-        gap: 15px;
-    }
-
-    /* Si tienes elementos hijos directos, puedes ajustar su ancho aquí */
-    .container>* {
-        flex: 1 1 calc(50% - 15px);
-        /* 2 columnas en tablets */
-    }
-}
-
-/* Media query para móviles */
-@media screen and (max-width: 576px) {
-    .container {
-        flex-direction: column;
-        /* Cambia a columna en móviles */
-        gap: 10px;
-    }
-
-    /* Si tienes elementos hijos directos */
-    .container>* {
-        flex: 1 1 100%;
-        /* Ocupa todo el ancho en móviles */
-        margin-bottom: 10px;
-    }
-}
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .about-section {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .album-content {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .album-cover {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .album-description {
+        font-size: 1.4rem;
+    }
+
+    .streaming-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .streaming-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .new-album-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section {
         flex-direction: column;
     }
 
-    .about-content {
-        order: 2;
-        padding: 20px;
+    .container {
+        flex-direction: column;
+        padding: 10px;
     }
 
-    .about-image {
-        order: 1;
-        max-height: 300px;
-    }
-
-    h1 {
-        font-size: 2rem;
+    .column {
+        min-width: 100%;
     }
 }
+
